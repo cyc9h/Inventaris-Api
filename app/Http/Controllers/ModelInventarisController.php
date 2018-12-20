@@ -8,7 +8,8 @@ use App\model_inventaris;
 class ModelInventarisController extends Controller
 {
     public function index(){
-    	return model_inventaris::all();
+        $model=model_inventaris::all()
+    	return response()->json(['data'=>$model]);
     } 
 
     public function create (request $request){
