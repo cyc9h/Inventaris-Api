@@ -9,7 +9,7 @@ class ModelInventarisController extends Controller
 {
     public function index(){
         $model=model_inventaris::all();
-    	return response()->json($model);
+    	return response()->json(['data'=>$model]);
     } 
 
     public function create (request $request){
